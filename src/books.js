@@ -31,9 +31,9 @@ const Books = () => {
 
   return (
     <div>
-      {posts.slice(0, 5).map((item) => (
-        <Link to={`/books/singlePage:${item.id}`} key={item.id}>
-          <SinglePage title={item.title} body={item.body} />
+      {posts.slice(0, 5).map((item,index) => (
+        <Link to={`/books/singlePage/:${item.id}`} key={item.id}>
+          <SinglePage title={item.title} body={item.body} id={index} />
         </Link>
       ))}
     </div>
